@@ -816,6 +816,16 @@ h1 em, h2 em {
 .stack-orbit:hover .stack-node {
   animation-play-state: paused;
 }
+.ai-tools {
+  text-align: center;
+  margin: 18px auto 0;
+  max-width: 720px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+  grid-column: 2;
+}
+.ai-tools strong { color: var(--lime); font-weight: 700; }
 @keyframes orbit-spin { to { transform: rotate(360deg); } }
 @keyframes orbit-unspin {
   from { transform: translate(-50%, -50%) rotate(calc(var(--a) * -1)); }
@@ -1060,6 +1070,7 @@ body.nav-open .to-top { opacity: 0; pointer-events: none; }
   body.nav-open .nav-mobile-talk { display: inline; }
   body.nav-open { overflow: hidden; }
   .hero, .stack-section, .journey { grid-template-columns: 1fr; }
+  .ai-tools { grid-column: 1; }
   .hero { padding-top: 36px; min-height: auto; }
   .hero-visual { min-height: auto; padding: 12px 0 8px; }
   .hero-portrait { width: min(280px, 68vw); height: min(280px, 68vw); }
