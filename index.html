@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=circle2" />
+  <link rel="stylesheet" href="styles.css?v=form1" />
 </head>
 <body>
   <a class="skip-link" href="#top">Skip to content</a>
@@ -26,7 +26,7 @@
       <a href="#stack">Stack</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="nav-cta" href="mailto:dipenkukadiya@gmail.com">Let's talk <span>↗</span></a>
+    <a class="nav-cta" href="#contact">Let's talk <span>↓</span></a>
     <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteNav"><i></i><i></i><i></i></button>
   </header>
   <main id="top">
@@ -36,7 +36,7 @@
         <p class="hero-sub">I'm Dipen Kukadiya — a Java / full-stack engineer with 3+ years building healthcare SaaS: EHR workflows, billing, pharmacy, labs, and multi-tenant systems. Remote with iCare.com LLC (Florida), based in Porbandar. I'm currently exploring AI, machine learning, and deep learning.</p>
         <div class="hero-actions">
           <a class="button primary" href="#work">Explore my work <span>↓</span></a>
-          <a class="button ghost" href="#contact">Get in touch <span>↗</span></a>
+          <a class="button ghost" href="#contact">Get in touch <span>↓</span></a>
         </div>
         <div class="micro-stats">
           <div><strong>3+ yrs</strong><span>Java · Full-stack</span></div>
@@ -207,6 +207,35 @@
         <div class="contact-glow"></div>
         <span class="kicker">SAY HELLO</span>
         <h2>Have a hard problem?<br><em>Let's build.</em></h2>
+        <form class="studio-form" id="studioForm" action="https://formsubmit.co/dipenkukadiya@gmail.com" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="New inquiry — Dip's software studio">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://dipenkukadiya.github.io/dipenkukadiya.io/#contact">
+          <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="nickname" maxlength="40" required>
+            <small class="error" data-error-for="name"></small>
+          </div>
+          <div class="field">
+            <label for="fullName">Full name</label>
+            <input id="fullName" name="fullName" type="text" autocomplete="name" maxlength="80" required>
+            <small class="error" data-error-for="fullName"></small>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" maxlength="120" required>
+            <small class="error" data-error-for="email"></small>
+          </div>
+          <div class="field">
+            <label for="aboutWork">About your work</label>
+            <textarea id="aboutWork" name="aboutWork" rows="5" maxlength="2000" required placeholder="What are you building, and how can the studio help?"></textarea>
+            <small class="error" data-error-for="aboutWork"></small>
+          </div>
+          <button class="button primary" type="submit" id="studioSubmit">Submit — connect to studio</button>
+          <p class="form-note" id="formNote" hidden></p>
+        </form>
         <div class="contact-actions">
           <a class="button primary" href="mailto:dipenkukadiya@gmail.com">Email me ↗</a>
           <a class="button ghost" href="https://wa.me/917016306728" target="_blank" rel="noreferrer">WhatsApp ↗</a>
@@ -220,6 +249,6 @@
     <span>© 2026 Dip's software studio</span>
     <span>Free on GitHub Pages</span>
   </footer>
-  <script src="app.js"></script>
+  <script src="app.js?v=form1"></script>
 </body>
 </html>

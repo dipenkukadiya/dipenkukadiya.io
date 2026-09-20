@@ -79,3 +79,86 @@ function setupSlideshow(root) {
 }
 
 document.querySelectorAll('[data-slideshow]').forEach(setupSlideshow);
+
+const studioForm = document.getElementById('studioForm');
+const formNote = document.getElementById('formNote');
+const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+const nameOk = /^[\p{L}][\p{L}\s.'-]{1,79}$/u;
+
+function setError(id, message) {
+  const field = document.getElementById(id)?.closest('.field');
+  const err = document.querySelector(`[data-error-for="${id}"]`);
+  if (field) field.classList.toggle('is-invalid', Boolean(message));
+  if (err) err.textContent = message || '';
+}
+
+function validateStudio() {
+  const name = document.getElementById('name').value.trim();
+  const fullName = document.getElementById('fullName').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const aboutWork = document.getElementById('aboutWork').value.trim();
+  let ok = true;
+
+  if (name.length < 2) {
+    setError('name', 'Enter a name (at least 2 characters).');
+    ok = false;
+  } else if (!nameOk.test(name)) {
+    setError('name', 'Use letters only — no numbers or links.');
+    ok = false;
+  } else {
+    setError('name', '');
+  }
+
+  if (fullName.length < 3) {
+    setError('fullName', 'Enter your full name.');
+    ok = false;
+  } else if (!nameOk.test(fullName)) {
+    setError('fullName', 'Use letters only — no numbers or links.');
+    ok = false;
+  } else if (!fullName.includes(' ')) {
+    setError('fullName', 'Please enter first and last name.');
+    ok = false;
+  } else {
+    setError('fullName', '');
+  }
+
+  if (!emailOk.test(email)) {
+    setError('email', 'Enter a valid email address.');
+    ok = false;
+  } else {
+    setError('email', '');
+  }
+
+  if (aboutWork.length < 20) {
+    setError('aboutWork', 'Tell us a bit more about your work (at least 20 characters).');
+    ok = false;
+  } else if (aboutWork.length > 2000) {
+    setError('aboutWork', 'Please keep this under 2000 characters.');
+    ok = false;
+  } else {
+    setError('aboutWork', '');
+  }
+
+  return ok;
+}
+
+if (studioForm) {
+  ['name', 'fullName', 'email', 'aboutWork'].forEach((id) => {
+    document.getElementById(id)?.addEventListener('blur', validateStudio);
+  });
+
+  studioForm.addEventListener('submit', (e) => {
+    if (studioForm.querySelector('.honeypot')?.value) {
+      e.preventDefault();
+      return;
+    }
+    if (!validateStudio()) {
+      e.preventDefault();
+      formNote.hidden = true;
+      studioForm.querySelector('.is-invalid input, .is-invalid textarea')?.focus();
+      return;
+    }
+    formNote.hidden = false;
+    formNote.textContent = 'Sending to Dip\'s software studio…';
+  });
+}

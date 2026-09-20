@@ -731,6 +731,51 @@ h1 em, h2 em {
   background: radial-gradient(circle at 50% 0, rgba(199, 255, 74, 0.09), transparent 45%), rgba(255, 255, 255, 0.02);
 }
 .contact-card h2 { margin-top: 16px; }
+.studio-form {
+  max-width: 520px;
+  margin: 36px auto 28px;
+  display: grid;
+  gap: 16px;
+  text-align: left;
+}
+.studio-form .field { display: grid; gap: 7px; }
+.studio-form label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.studio-form input,
+.studio-form textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  color: #fff;
+  font: 14px/1.5 "DM Sans", sans-serif;
+  outline: none;
+  resize: vertical;
+}
+.studio-form input:focus,
+.studio-form textarea:focus { border-color: var(--lime); }
+.studio-form .field.is-invalid input,
+.studio-form .field.is-invalid textarea { border-color: #ff6b6b; }
+.studio-form .error {
+  min-height: 16px;
+  color: #ff8a8a;
+  font-size: 12px;
+}
+.studio-form .button { justify-content: center; border: 0; cursor: pointer; width: 100%; }
+.studio-form .honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+.form-note { text-align: center; color: var(--lime); font-size: 13px; margin: 0; }
 .contact-card p { max-width: 520px; margin: 25px auto; color: var(--muted); line-height: 1.7; font-size: 14px; }
 .contact-actions { justify-content: center; }
 .contact-glow {
