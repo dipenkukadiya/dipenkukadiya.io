@@ -142,11 +142,12 @@ function validateStudio() {
   return ok;
 }
 
-if (studioForm) {
-  ['name', 'fullName', 'email', 'aboutWork'].forEach((id) => {
-    document.getElementById(id)?.addEventListener('blur', validateStudio);
-  });
+function clearStudioErrors() {
+  ['name', 'fullName', 'email', 'aboutWork'].forEach((id) => setError(id, ''));
+  if (formNote) formNote.hidden = true;
+}
 
+if (studioForm) {
   studioForm.addEventListener('submit', (e) => {
     if (studioForm.querySelector('.honeypot')?.value) {
       e.preventDefault();
@@ -155,10 +156,13 @@ if (studioForm) {
     if (!validateStudio()) {
       e.preventDefault();
       formNote.hidden = true;
-      studioForm.querySelector('.is-invalid input, .is-invalid textarea')?.focus();
       return;
     }
     formNote.hidden = false;
     formNote.textContent = 'Sending to Dip\'s software studio…';
+  });
+
+  document.addEventListener('pointerdown', (e) => {
+    if (!studioForm.contains(e.target)) clearStudioErrors();
   });
 }
