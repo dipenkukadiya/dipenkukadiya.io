@@ -630,6 +630,106 @@ h1 em, h2 em {
   text-decoration: none;
 }
 .tags a:hover, .tag-link:hover { border-color: var(--lime); color: var(--lime); }
+.impact-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 0 0 16px;
+}
+.impact-row div {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 10px;
+}
+.impact-row strong {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 16px;
+  color: #fff;
+}
+.impact-row span { color: var(--muted); font-size: 11px; }
+.project.lab-feature { grid-column: 1 / -1; }
+.triage-widget {
+  padding: 22px 22px 8px;
+  background: #080a10;
+  border-bottom: 1px solid var(--line);
+}
+.triage-widget label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.triage-widget textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line);
+  color: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  font: 14px/1.5 "DM Sans", sans-serif;
+  resize: vertical;
+}
+.triage-widget textarea:focus { outline: none; border-color: var(--lime); }
+.triage-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0; }
+.triage-actions .button { cursor: pointer; border: 0; }
+.triage-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.triage-chips button {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: #c5ccd6;
+  border-radius: 99px;
+  padding: 6px 10px;
+  font-size: 11px;
+  cursor: pointer;
+}
+.triage-chips button:hover { border-color: var(--lime); color: #fff; }
+.triage-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  padding-bottom: 16px;
+}
+.triage-bars { display: grid; gap: 8px; margin-top: 12px; }
+.triage-bar {
+  display: grid;
+  grid-template-columns: 110px 1fr 40px;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #c5ccd6;
+}
+.triage-bar i {
+  display: block;
+  height: 7px;
+  border-radius: 99px;
+  background: linear-gradient(90deg, var(--lime), transparent);
+  width: var(--w);
+  background-color: rgba(199, 255, 74, 0.15);
+}
+.triage-bar.is-top { color: #fff; }
+.triage-bar b { font-size: 11px; color: var(--lime); text-align: right; }
+.triage-phi {
+  margin-top: 12px;
+  min-height: 80px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: #dce7f4;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.triage-phi p { margin: 0 0 8px; color: var(--muted); font-size: 12px; }
+.triage-phi mark.phi {
+  background: rgba(255, 107, 107, 0.25);
+  color: #ffd6d6;
+  border-radius: 4px;
+  padding: 0 3px;
+}
+.lab-page { padding-top: 48px; padding-bottom: 80px; }
+.lab-note { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 28px 0; max-width: 680px; }
 .experience-list { display: grid; gap: 18px; }
 .experience-item {
   display: grid;
@@ -959,6 +1059,7 @@ body.nav-open .to-top { opacity: 0; pointer-events: none; }
   .section-head > p { margin-top: 25px; }
   .project-grid { grid-template-columns: 1fr; }
   .project.featured { grid-row: auto; }
+  .impact-row, .triage-split { grid-template-columns: 1fr; }
   .module-grid { grid-template-columns: 1fr 1fr; }
   .slideshow, .featured .slideshow { height: 240px; }
   .stack-orbit {

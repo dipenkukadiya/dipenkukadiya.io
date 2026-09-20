@@ -130,21 +130,10 @@ function setError(id, message) {
 }
 
 function validateStudio() {
-  const name = document.getElementById('name').value.trim();
   const fullName = document.getElementById('fullName').value.trim();
   const email = document.getElementById('email').value.trim();
   const aboutWork = document.getElementById('aboutWork').value.trim();
   let ok = true;
-
-  if (name.length < 2) {
-    setError('name', 'Enter a name (at least 2 characters).');
-    ok = false;
-  } else if (!nameOk.test(name)) {
-    setError('name', 'Use letters only — no numbers or links.');
-    ok = false;
-  } else {
-    setError('name', '');
-  }
 
   if (fullName.length < 3) {
     setError('fullName', 'Enter your full name.');
@@ -180,7 +169,7 @@ function validateStudio() {
 }
 
 function clearStudioErrors() {
-  ['name', 'fullName', 'email', 'aboutWork'].forEach((id) => setError(id, ''));
+  ['fullName', 'email', 'aboutWork'].forEach((id) => setError(id, ''));
   if (formNote) formNote.hidden = true;
 }
 
@@ -203,3 +192,7 @@ if (studioForm) {
     if (!studioForm.contains(e.target)) clearStudioErrors();
   });
 }
+
+document.querySelectorAll('.triage-widget').forEach((el) => {
+  window.bindTriage?.(el);
+});

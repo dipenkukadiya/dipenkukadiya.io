@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Studio lab — a tiny in-browser classifier that routes EHR support tickets and flags likely PHI." />
+  <title>EHR ticket triage — Dip's software studio</title>
+  <link rel="stylesheet" href="../styles.css?v=hire1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="../">Dip's <em>software studio</em></a>
+    <a class="nav-cta" href="../#contact">Let's talk <span>↓</span></a>
+  </header>
+  <main class="section lab-page">
+    <div class="section-head">
+      <div>
+        <span class="kicker">STUDIO LAB · EXPLORING ML</span>
+        <h2>EHR ticket triage.<br><em>Runs in your browser.</em></h2>
+      </div>
+      <p>A small text classifier (TF–IDF + naive Bayes style scoring) trained on example tickets. Not a hosted LLM. Source is on GitHub.</p>
+    </div>
+    <div class="triage-widget" id="triageLab">
+      <label for="triageInput">Paste a support ticket</label>
+      <textarea id="triageInput" data-triage-input rows="5" placeholder="e.g. Claim denied — CPT and ICD-10 do not match on this visit."></textarea>
+      <div class="triage-actions">
+        <button class="button primary" type="button" data-triage-run>Classify</button>
+        <a class="button ghost" href="https://github.com/dipenkukadiya/dipenkukadiya.io/blob/main/lab/triage.js" target="_blank" rel="noreferrer">Source ↗</a>
+      </div>
+      <div class="triage-chips" data-triage-chips></div>
+      <div class="triage-split">
+        <div>
+          <span class="kicker">MODULE SCORES</span>
+          <div data-triage-bars class="triage-bars"></div>
+        </div>
+        <div>
+          <span class="kicker">PHI SCAN</span>
+          <div data-triage-phi class="triage-phi"><p>Paste a ticket. Do not use real patient charts.</p></div>
+        </div>
+      </div>
+    </div>
+    <p class="lab-note">This is practice work while I explore ML for healthcare ops — routing, not diagnosis. Public demos never use real PHI.</p>
+    <div class="contact-actions">
+      <a class="button primary" href="../#work">Back to work</a>
+      <a class="button ghost" href="https://github.com/dipenkukadiya/Digital_ration_card" target="_blank" rel="noreferrer">Digital Ration Card ↗</a>
+    </div>
+  </main>
+  <script src="triage.js"></script>
+  <script>bindTriage(document.getElementById('triageLab'));</script>
+</body>
+</html>
