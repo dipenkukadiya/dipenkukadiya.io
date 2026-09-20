@@ -680,6 +680,20 @@ h1 em, h2 em {
 .n8 { left: 10%; top: 17%; }
 .n9 { left: 27%; top: 4%; }
 .n10 { right: 27%; top: 4%; color: var(--lime); }
+.stack-node.inner {
+  padding: 6px 9px;
+  font-size: 9px;
+  color: var(--lime);
+  border-color: rgba(199, 255, 74, 0.28);
+  transform: translate(-50%, -50%);
+}
+.i1 { top: 30.5%; left: 50%; }
+.i2 { top: 38%; left: 65%; }
+.i3 { top: 54%; left: 69%; }
+.i4 { top: 67.5%; left: 58.5%; }
+.i5 { top: 67.5%; left: 41.5%; }
+.i6 { top: 54%; left: 31%; }
+.i7 { top: 38%; left: 35%; }
 .achievement-badges {
   display: flex;
   flex-direction: column;
