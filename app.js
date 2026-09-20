@@ -1,3 +1,25 @@
+function isPageReload() {
+  const nav = performance.getEntriesByType?.('navigation')?.[0];
+  if (nav) return nav.type === 'reload';
+  return performance.navigation?.type === 1;
+}
+
+function openFromStart() {
+  if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+  window.scrollTo(0, 0);
+}
+
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+if (isPageReload()) openFromStart();
+
+window.addEventListener('pageshow', () => {
+  if (isPageReload()) openFromStart();
+});
+
+window.addEventListener('load', () => {
+  if (isPageReload()) openFromStart();
+});
+
 const glow = document.getElementById('cursorGlow');
 if (glow) {
   document.addEventListener('pointermove', (e) => {

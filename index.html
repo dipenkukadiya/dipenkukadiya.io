@@ -13,6 +13,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=orbit1" />
+  <script>
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    (function () {
+      var nav = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+      var reload = (nav && nav.type === 'reload') || (performance.navigation && performance.navigation.type === 1);
+      if (reload) {
+        if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+        window.scrollTo(0, 0);
+      }
+    })();
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#top">Skip to content</a>
@@ -268,6 +279,6 @@
     <span>© 2026 Dip's software studio</span>
     <span>Free on GitHub Pages</span>
   </footer>
-  <script src="app.js?v=lab1"></script>
+  <script src="app.js?v=start1"></script>
 </body>
 </html>
