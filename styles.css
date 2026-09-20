@@ -72,6 +72,9 @@ body {
   font-family: "Space Grotesk", sans-serif;
   font-size: 19px;
 }
+.brand-copy { display: grid; line-height: 1.05; }
+.brand-copy b { font-size: 16px; font-weight: 700; }
+.brand-copy small { font-size: 10px; letter-spacing: 0.12em; color: #aeb4c0; text-transform: uppercase; }
 .brand span {
   display: grid;
   place-items: center;
