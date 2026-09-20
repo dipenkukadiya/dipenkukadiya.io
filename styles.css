@@ -64,26 +64,24 @@ body {
   z-index: 30;
 }
 .brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
   text-decoration: none;
   color: #fff;
   font-family: "Space Grotesk", sans-serif;
-  font-size: 19px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
 }
-.brand-copy { display: grid; line-height: 1.05; }
-.brand-copy b { font-size: 16px; font-weight: 700; }
-.brand-copy small { font-size: 10px; letter-spacing: 0.12em; color: #aeb4c0; text-transform: uppercase; }
-.brand span {
-  display: grid;
-  place-items: center;
-  width: 34px;
-  height: 34px;
-  border: 1px solid var(--lime);
-  border-radius: 10px;
+.brand em {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
   color: var(--lime);
-  font-size: 11px;
 }
 .nav nav { display: flex; gap: 28px; }
 .nav nav a, .nav-cta {
@@ -98,6 +96,7 @@ body {
   border-radius: 99px;
 }
 .nav-cta span { color: var(--lime); }
+.brand:hover em { color: #fff; }
 .menu-toggle {
   display: none;
   width: 42px;
