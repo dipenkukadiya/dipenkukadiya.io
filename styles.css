@@ -893,6 +893,14 @@ h1 em, h2 em {
   font-size: 12px;
   font-weight: 600;
 }
+.cert-card.is-static {
+  cursor: default;
+}
+.cert-card.is-static:hover {
+  transform: none;
+  border-color: var(--line);
+}
+.cert-card.is-static span { color: var(--muted); }
 .about-strip {
   display: grid;
   grid-template-columns: 140px 1.15fr 0.95fr;
