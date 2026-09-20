@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=resp2" />
+  <link rel="stylesheet" href="styles.css?v=lab1" />
 </head>
 <body>
   <a class="skip-link" href="#top">Skip to content</a>
@@ -94,9 +94,7 @@
           </div>
         </article>
         <article class="project reveal">
-          <div class="slideshow" data-slideshow>
-            <div class="slides">
-              <figure class="slide is-on"><img src="assets/skillwaala-home.png" alt="SkillWaala home"><figcaption>Home</figcaption></figure>
+          <div class="slideshow" data-slideshow data-href="https://skillwaala.in">
               <figure class="slide"><img src="assets/skillwaala-services.png" alt="SkillWaala services"><figcaption>Services</figcaption></figure>
               <figure class="slide"><img src="assets/skillwaala-workers.png" alt="SkillWaala workers"><figcaption>Workers</figcaption></figure>
             </div>
@@ -105,25 +103,30 @@
             <div class="slide-dots" role="tablist"></div>
           </div>
           <div class="project-info">
-            <div><span class="project-number">02</span><h3>SkillWaala</h3></div>
-            <p>My practice marketplace: discover services, browse workers by city, and contact the platform. Live at skillwaala.in.</p>
+            <div><span class="project-number">02</span><h3><a class="project-title-link" href="https://skillwaala.in" target="_blank" rel="noreferrer">SkillWaala</a></h3></div>
+            <p>A live Dip's software studio build — local services marketplace. Open the site, browse workers, and hire help.</p>
             <div class="tags">
-              <a class="tag-link" href="https://skillwaala.in" target="_blank" rel="noreferrer">skillwaala.in ↗</a>
+              <a class="tag-link" href="https://skillwaala.in" target="_blank" rel="noreferrer">Visit skillwaala.in ↗</a>
               <span>Marketplace</span>
               <span>Location search</span>
             </div>
           </div>
         </article>
         <article class="project reveal">
-          <div class="project-art lab-art">
-            <div class="barcode"></div>
-            <div class="lab-card"><small>LAB REQUISITION</small><strong>EXT LAB</strong><span>PDF417 • ORDER READY</span></div>
-            <div class="art-label">03 / LAB + PHARMACY</div>
+          <div class="slideshow" data-slideshow>
+            <div class="slides">
+              <figure class="slide is-on"><img src="assets/extlab-order.png" alt="External lab order screen with personal details redacted"><figcaption>External lab order</figcaption></figure>
+              <figure class="slide"><img src="assets/extlab-req.png" alt="Lab requisition PDF with dates and identifiers redacted"><figcaption>Lab requisition</figcaption></figure>
+              <figure class="slide"><img src="assets/extlab-rx.png" alt="Outpatient prescription with dates and identifiers redacted"><figcaption>Outpatient Rx</figcaption></figure>
+            </div>
+            <button class="slide-btn prev" type="button" aria-label="Previous screenshot">‹</button>
+            <button class="slide-btn next" type="button" aria-label="Next screenshot">›</button>
+            <div class="slide-dots" role="tablist"></div>
           </div>
           <div class="project-info">
-            <div><span class="project-number">03</span><h3>Lab, pharmacy &amp; billing</h3></div>
-            <p>Prescriptions, refills, e-prescribing, lab orders, specimen tracking, results, CPT/ICD-10 coding, charge capture, and claims.</p>
-            <div class="tags"><span>REST</span><span>JasperReports</span><span>Surescripts</span><span>JavaScript</span></div>
+            <div><span class="project-number">03</span><h3>External lab &amp; pharmacy</h3></div>
+            <p>External lab orders, Labcorp requisitions, and outpatient prescriptions — dates and personal identifiers are redacted on these screenshots.</p>
+            <div class="tags"><span>REST</span><span>JasperReports</span><span>PDF</span><span>eRx</span></div>
           </div>
         </article>
       </div>
@@ -257,6 +260,6 @@
     <span>© 2026 Dip's software studio</span>
     <span>Free on GitHub Pages</span>
   </footer>
-  <script src="app.js?v=form2"></script>
+  <script src="app.js?v=lab1"></script>
 </body>
 </html>

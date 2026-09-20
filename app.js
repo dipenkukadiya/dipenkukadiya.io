@@ -75,6 +75,13 @@ function setupSlideshow(root) {
 
   root.querySelector('.prev')?.addEventListener('click', () => go(i - 1));
   root.querySelector('.next')?.addEventListener('click', () => go(i + 1));
+  const href = root.dataset.href;
+  if (href) {
+    root.style.cursor = 'pointer';
+    root.querySelector('.slides')?.addEventListener('click', () => {
+      window.open(href, '_blank', 'noopener,noreferrer');
+    });
+  }
   setInterval(() => go(i + 1), 4500);
 }
 
