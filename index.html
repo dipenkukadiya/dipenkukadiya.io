@@ -7,6 +7,7 @@
   <meta name="theme-color" content="#07080c" />
   <title>Dipen Kukadiya — Software Engineer</title>
   <link rel="canonical" href="https://dipenkukadiya.github.io/dipenkukadiya.io/" />
+  <meta property="og:image" content="https://dipenkukadiya.github.io/dipenkukadiya.io/assets/dipen-hero.jpg" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307080c'/%3E%3Crect x='3' y='3' width='58' height='58' rx='12' fill='none' stroke='%23c7ff4a' stroke-width='2'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial' font-size='22' font-weight='700' fill='%23c7ff4a'%3EDK%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,21 +47,9 @@
       </div>
       <div class="hero-visual reveal">
         <div class="orb orb-a"></div><div class="orb orb-b"></div>
-        <div class="hero-system-card">
-          <div class="system-top"><span>ENGINEERING / 01</span><span class="live-dot">● BUILDING</span></div>
-          <div class="system-core">
-            <div class="core-grid"></div>
-            <div class="core-logo">DK</div>
-            <div class="core-label">SOFTWARE<br>ENGINEER</div>
-            <div class="signal signal-a">JAVA 17</div>
-            <div class="signal signal-b">SPRING BOOT</div>
-            <div class="signal signal-c">AI / RAG</div>
-          </div>
-          <div class="system-bottom">
-            <div><small>FOCUS</small><b>Backend → AI</b></div>
-            <div><small>BUILDING</small><b>SkillWaala</b></div>
-          </div>
-        </div>
+        <figure class="hero-portrait">
+          <img src="assets/dipen-hero.jpg" alt="Dipen Kukadiya, Java and full-stack engineer" width="1200" height="800" />
+        </figure>
       </div>
     </section>
     <section class="ticker" aria-hidden="true"><div class="ticker-track"><span>JAVA</span><b>✦</b><span>SPRING BOOT</span><b>✦</b><span>MICROSERVICES</span><b>✦</b><span>HEALTHCARE</span><b>✦</b><span>AI ENGINEERING</span><b>✦</b><span>JAVA</span><b>✦</b><span>SPRING BOOT</span><b>✦</b><span>MICROSERVICES</span><b>✦</b><span>HEALTHCARE</span><b>✦</b><span>AI ENGINEERING</span></div></section>
@@ -71,20 +60,9 @@
       </div>
       <div class="project-grid">
         <article class="project featured reveal">
-          <div class="project-art healthcare-art">
-            <div class="grid-lines"></div>
-            <div class="ehr-ui">
-              <div class="ehr-top"><span>iCare EHR</span><span>● ENTERPRISE</span></div>
-              <div class="ehr-body">
-                <div class="ehr-sidebar"><i></i><i></i><i></i><i></i><i></i></div>
-                <div class="ehr-main">
-                  <div class="ehr-patient"><b>Clinical workspace</b><small>Scheduling · Orders · Billing</small></div>
-                  <span></span><span></span>
-                  <div class="ehr-chart"></div>
-                </div>
-              </div>
-            </div>
-            <div class="art-label">01 / HEALTHCARE PLATFORM</div>
+          <div class="project-art shot-art">
+            <img src="assets/icare-scheduling.png" alt="iCare EHR scheduling workspace" />
+            <div class="art-label">01 / ICARE EHR · SCHEDULING</div>
           </div>
           <div class="project-info">
             <div><span class="project-number">01</span><h3>iCare EHR</h3></div>
@@ -93,23 +71,14 @@
           </div>
         </article>
         <article class="project reveal">
-          <div class="project-art code-art">
-            <div class="code-window">
-              <div class="dots"><i></i><i></i><i></i><span>EncounterCheckout.java</span></div>
-              <pre><code><b>@EventListener</b>
-public void handle(EncounterEvent e) {
-  cache.publish(
-    checkoutChannel,
-    e.getEncounterId()
-  );
-}</code></pre>
-            </div>
-            <div class="art-label">02 / DISTRIBUTED EVENTS</div>
+          <div class="project-art shot-art">
+            <img src="assets/icare-admin.png" alt="iCare admin dashboard with system overview" />
+            <div class="art-label">02 / ICARE · ADMIN DASHBOARD</div>
           </div>
           <div class="project-info">
-            <div><span class="project-number">02</span><h3>Event &amp; cache systems</h3></div>
-            <p>Redis/ElastiCache, pub-sub flows, listeners, and event-driven integrations inside a large Java platform.</p>
-            <div class="tags"><span>Redis</span><span>Lettuce</span><span>Pub/Sub</span><span>OSGi</span></div>
+            <div><span class="project-number">02</span><h3>Admin &amp; operations</h3></div>
+            <p>Platform operations work across admin dashboards, user activity, and healthcare system overview screens used in production.</p>
+            <div class="tags"><span>Java</span><span>Enterprise UI</span><span>Dashboards</span></div>
           </div>
         </article>
         <article class="project reveal">
@@ -125,39 +94,9 @@ public void handle(EncounterEvent e) {
           </div>
         </article>
         <article class="project reveal">
-          <div class="project-art skill-art">
-            <div class="skill-gallery">
-              <div class="skill-screen screen-home">
-                <div class="mini-nav"><b>SKILL Waala</b><span>Home  Services  Workers</span></div>
-                <div class="mini-home">
-                  <small>✦ TRUSTED LOCAL SERVICES</small>
-                  <strong>Your city has the skill —<br><em>we bring it to your door</em></strong>
-                  <p>Home services, drivers, baby care, salon &amp; daily needs</p>
-                  <div class="mini-search"><span>Service</span><span>City</span><span>Pincode</span><b>Find now →</b></div>
-                </div>
-              </div>
-              <div class="skill-screen screen-services">
-                <div class="mini-page-title">All Services<small>Home, family, transport &amp; daily needs</small></div>
-                <div class="mini-service-grid">
-                  <span>🏠<b>Home Services</b><i>14 professionals</i></span>
-                  <span>💇<b>Personal Care</b><i>7 professionals</i></span>
-                  <span>🚗<b>Transport</b><i>5 professionals</i></span>
-                  <span>🛒<b>Daily Needs</b><i>4 professionals</i></span>
-                </div>
-              </div>
-              <div class="skill-screen screen-workers">
-                <div class="mini-page-title">Available Workers<small>Hire verified professionals</small></div>
-                <div class="mini-filter">Search by name… <b>Search</b></div>
-                <div class="mini-workers">
-                  <span><b>RP</b> Ramesh Patel<small>Plumber · Ahmedabad</small></span>
-                  <span><b>JM</b> Jignesh Modi<small>Electrician · Ahmedabad</small></span>
-                </div>
-              </div>
-              <div class="skill-screen screen-contact">
-                <div class="mini-page-title">Contact<small>Connect with SkillWaala</small></div>
-                <div class="mini-form"><span>Your full name</span><span>you@example.com</span><b>Send message</b></div>
-              </div>
-            </div>
+          <div class="project-art shot-pair">
+            <img src="assets/skillwaala-home.png" alt="SkillWaala homepage" />
+            <img src="assets/skillwaala-workers.png" alt="SkillWaala workers listing" />
             <div class="art-label">04 / PRACTICE SITE · LIVE</div>
           </div>
           <div class="project-info">

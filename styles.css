@@ -157,6 +157,36 @@ h1 em, h2 em {
 .micro-stats strong { font-family: "Space Grotesk", sans-serif; font-size: 14px; }
 .micro-stats span { font-size: 10px; color: var(--muted); }
 .hero-visual { position: relative; min-height: 590px; display: grid; place-items: center; }
+.hero-portrait {
+  margin: 0;
+  width: min(460px, 92%);
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.45);
+  position: relative;
+  z-index: 2;
+}
+.hero-portrait img { display: block; width: 100%; height: auto; }
+.shot-art { background: #0a0c12; }
+.shot-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+.shot-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #0a0c12;
+}
+.shot-pair img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
 .hero-system-card {
   width: min(430px, 90%);
   height: 540px;

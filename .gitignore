@@ -2,4 +2,5 @@
 Thumbs.db
 *.log
 .vscode/
-.idea/
+ChatGPT Image*.png
+ChatGPT Image*.jpg
