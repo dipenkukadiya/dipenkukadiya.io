@@ -1,5 +1,5 @@
 # Dipen Kukadiya — Portfolio
 
-Free public site (GitHub Pages): **https://dipenkukadiya.github.io/**
+Free public site: **https://dipenkukadiya.github.io/dipenkukadiya.io/**
 
-No custom domain needed. Hosting is free.
+Source: [github.com/dipenkukadiya/dipenkukadiya.io](https://github.com/dipenkukadiya/dipenkukadiya.io)
