@@ -850,6 +850,35 @@ footer {
   font: 9px monospace;
   letter-spacing: 0.08em;
 }
+.to-top {
+  position: fixed;
+  right: 22px;
+  bottom: max(22px, env(safe-area-inset-bottom));
+  z-index: 40;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  color: #080a0d;
+  background: var(--lime);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35), 0 0 22px rgba(199, 255, 74, 0.28);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity .25s ease, transform .25s ease, background .2s ease;
+}
+.to-top.is-on {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+.to-top:hover { background: #d6ff72; }
+body.nav-open .to-top { opacity: 0; pointer-events: none; }
 @keyframes marquee { to { transform: translateX(-50%); } }
 @media (max-width: 1100px) {
   .hero { gap: 28px; padding-top: 48px; }
@@ -942,6 +971,7 @@ footer {
   .about-strip p,
   .about-strip .achievement-badges { grid-column: auto; }
   footer { flex-direction: column; gap: 10px; }
+  .to-top { right: 16px; width: 48px; height: 48px; }
   .contact-card { padding: 48px 16px; }
   .studio-form { margin: 28px auto 20px; }
 }

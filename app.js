@@ -20,6 +20,14 @@ window.addEventListener('load', () => {
   if (isPageReload()) openFromStart();
 });
 
+const toTop = document.getElementById('toTop');
+const toggleToTop = () => {
+  if (!toTop) return;
+  toTop.classList.toggle('is-on', window.scrollY > 380);
+};
+toggleToTop();
+window.addEventListener('scroll', toggleToTop, { passive: true });
+
 const glow = document.getElementById('cursorGlow');
 if (glow) {
   document.addEventListener('pointermove', (e) => {
