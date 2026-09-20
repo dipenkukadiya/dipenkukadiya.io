@@ -46,3 +46,36 @@ if (menuToggle && siteNav) {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') setMenu(false);
 });
+
+function setupSlideshow(root) {
+  const slides = [...root.querySelectorAll('.slide')];
+  if (!slides.length) return;
+  const dots = root.querySelector('.slide-dots');
+  let i = slides.findIndex((s) => s.classList.contains('is-on'));
+  if (i < 0) i = 0;
+
+  const go = (n) => {
+    i = (n + slides.length) % slides.length;
+    slides.forEach((s, idx) => s.classList.toggle('is-on', idx === i));
+    if (dots) {
+      [...dots.children].forEach((d, idx) => d.classList.toggle('is-on', idx === i));
+    }
+  };
+
+  if (dots) {
+    slides.forEach((_, idx) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('aria-label', `Slide ${idx + 1}`);
+      if (idx === i) b.classList.add('is-on');
+      b.addEventListener('click', () => go(idx));
+      dots.appendChild(b);
+    });
+  }
+
+  root.querySelector('.prev')?.addEventListener('click', () => go(i - 1));
+  root.querySelector('.next')?.addEventListener('click', () => go(i + 1));
+  setInterval(() => go(i + 1), 4500);
+}
+
+document.querySelectorAll('[data-slideshow]').forEach(setupSlideshow);
