@@ -1200,8 +1200,8 @@ body.nav-open .to-top { opacity: 0; pointer-events: none; }
 }
 .coin {
   position: relative;
-  width: 330px;
-  height: 330px;
+  width: 360px;
+  height: 360px;
   transform-style: preserve-3d;
   animation: studioCoinFlip 8s cubic-bezier(.45,0,.55,1) infinite;
   filter: drop-shadow(30px 34px 32px rgba(0,0,0,.58));
@@ -1262,9 +1262,9 @@ body.nav-open .to-top { opacity: 0; pointer-events: none; }
     0 0 24px rgba(232,189,99,.16);
   color: #f8f9fb;
   font-family: "DM Sans", sans-serif;
-  font-size: 43px;
+  font-size: 44px;
   font-weight: 800;
-  line-height: .96;
+  line-height: .98;
   letter-spacing: -.055em;
   text-align: center;
   text-shadow: 0 3px 16px rgba(0,0,0,.8);
@@ -1346,26 +1346,20 @@ body.nav-open .to-top { opacity: 0; pointer-events: none; }
 
 /* Flip far enough to expose the thick side, then settle with the same readable face */
 @keyframes studioCoinFlip {
-  0%, 10% {
-    transform: rotateY(-28deg) rotateX(8deg) rotateZ(-1deg) translateY(0);
+  0%, 12% {
+    transform: rotateY(0deg) rotateX(4deg) rotateZ(-1deg) translateY(0);
   }
-  24% {
-    transform: rotateY(28deg) rotateX(8deg) rotateZ(-1deg) translateY(-7px);
+  30% {
+    transform: rotateY(90deg) rotateX(4deg) rotateZ(-1deg) translateY(-8px);
   }
-  39% {
-    transform: rotateY(90deg) rotateX(8deg) rotateZ(-1deg) translateY(-14px);
+  42%, 54% {
+    transform: rotateY(180deg) rotateX(4deg) rotateZ(-1deg) translateY(-10px);
   }
-  50% {
-    transform: rotateY(180deg) rotateX(8deg) rotateZ(-1deg) translateY(-14px);
+  72% {
+    transform: rotateY(270deg) rotateX(4deg) rotateZ(-1deg) translateY(-8px);
   }
-  62% {
-    transform: rotateY(270deg) rotateX(8deg) rotateZ(-1deg) translateY(-7px);
-  }
-  76%, 90% {
-    transform: rotateY(332deg) rotateX(8deg) rotateZ(-1deg) translateY(0);
-  }
-  100% {
-    transform: rotateY(332deg) rotateX(8deg) rotateZ(-1deg) translateY(0);
+  88%, 100% {
+    transform: rotateY(360deg) rotateX(4deg) rotateZ(-1deg) translateY(0);
   }
 }
 @keyframes coinGlow {
