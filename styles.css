@@ -1165,3 +1165,24 @@ body.nav-open .to-top { opacity: 0; pointer-events: none; }
   visibility: visible !important;
   text-shadow: 0 0 30px rgba(199, 255, 74, 0.16);
 }
+
+
+/* Visible studio mark inside the hero circle */
+.hero-studio-mark::after {
+  content: "Dip's SS";
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  color: #f4f5f7;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(42px, 7vw, 72px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.06em;
+  text-align: center;
+  padding-top: calc(50% - 0.5em);
+  text-shadow: 0 0 24px rgba(199, 255, 74, 0.25);
+  opacity: 1;
+  visibility: visible;
+}
