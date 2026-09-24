@@ -1045,6 +1045,86 @@ footer {
 }
 .to-top:hover { background: #d6ff72; }
 body.nav-open .to-top { opacity: 0; pointer-events: none; }
+
+/* Dip's Software Studio — 3D coin hero */
+.hero-coin {
+  position: relative;
+  width: min(500px, 76vw);
+  height: min(500px, 76vw);
+  display: grid;
+  place-items: center;
+  perspective: 1400px;
+  isolation: isolate;
+}
+.coin {
+  position: relative;
+  width: min(360px, 62vw);
+  aspect-ratio: 1;
+  transform-style: preserve-3d;
+  animation: studioCoinFlip 7s ease-in-out infinite;
+  filter: drop-shadow(0 28px 30px rgba(0,0,0,.55));
+}
+.coin-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border: 8px solid #d5a43d;
+  outline: 2px solid rgba(255,231,160,.85);
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255,255,255,.20), transparent 22%),
+    radial-gradient(circle at 70% 75%, rgba(85,220,255,.10), transparent 35%),
+    linear-gradient(145deg,#252c37 0%,#080c13 58%,#171d27 100%);
+  box-shadow:
+    inset 0 0 0 4px rgba(255,255,255,.08),
+    inset 0 0 42px rgba(0,0,0,.9),
+    0 0 35px rgba(232,189,99,.18);
+  color: #f8f9fb;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 800;
+  line-height: .98;
+  letter-spacing: -.055em;
+  text-align: center;
+  text-shadow: 0 3px 16px rgba(0,0,0,.85);
+  overflow: hidden;
+}
+.coin-face span { display: block !important; position: relative; z-index: 2; }
+.coin-dip, .coin-accent { color: #c7ff4a; font-weight: 800; }
+.coin-front { transform: translateZ(12px); }
+.coin-back { transform: rotateY(180deg) translateZ(12px); }
+.coin-back span { transform: scaleX(-1); }
+.coin::before {
+  content: "";
+  position: absolute;
+  inset: 0 -18px 0 0;
+  border-radius: 50%;
+  background: repeating-linear-gradient(90deg,#795019 0 3px,#e3b34d 3px 6px,#9a671e 6px 9px);
+  transform: translateZ(-10px);
+  box-shadow: 0 0 0 3px #f0c96c;
+  z-index: -1;
+}
+.coin::after {
+  content: "";
+  position: absolute;
+  inset: -25px;
+  border-radius: 50%;
+  background: radial-gradient(circle,rgba(199,255,74,.14),transparent 64%);
+  filter: blur(16px);
+  transform: translateZ(-35px);
+  z-index: -2;
+}
+@keyframes studioCoinFlip {
+  0%, 18% { transform: rotateY(0deg); }
+  42%, 58% { transform: rotateY(180deg); }
+  82%, 100% { transform: rotateY(360deg); }
+}
+
 @keyframes marquee { to { transform: translateX(-50%); } }
 @media (max-width: 1100px) {
   .hero { gap: 28px; padding-top: 48px; }
