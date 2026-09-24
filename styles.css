@@ -1281,7 +1281,9 @@ body.nav-open .to-top { opacity: 0; pointer-events: none; }
 }
 /* Keep the lettering readable on the reverse face */
 .coin-back span {
-  transform: rotateY(180deg);
+  transform: scaleX(-1);
+  backface-visibility: visible;
+  -webkit-backface-visibility: visible;
 }
 
 /* Partial arrow indicators — intentionally NOT a complete orbit */
