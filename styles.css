@@ -1143,3 +1143,19 @@ body.nav-open .to-top { opacity: 0; pointer-events: none; }
   .contact-card { padding: 48px 16px; }
   .studio-form { margin: 28px auto 20px; }
 }
+
+
+.hero-studio-mark {
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 35% 30%, rgba(199, 255, 74, 0.16), rgba(255, 255, 255, 0.03) 45%, rgba(0, 0, 0, 0.35));
+  text-align: center;
+}
+.hero-studio-mark span {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(42px, 7vw, 72px);
+  font-weight: 700;
+  letter-spacing: -0.06em;
+  color: var(--text);
+  text-shadow: 0 0 30px rgba(199, 255, 74, 0.16);
+}
